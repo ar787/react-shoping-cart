@@ -12,21 +12,9 @@ async function getProducts() {
 
 function App() {
   const {data, isLoading, isError, error} = useQuery("products", getProducts)
-  // const [, setScrollY] = useState(0)
   const [openSideBar, setOpenSideBar] = useState(false)
   const [cartItems, setCartItems] = useState([])
-  // function logit() {
-  //   setScrollY(window.pageYOffset)
-  // }
-  // useEffect(()=> {
-  //     function watchScroll() {
-  //      window.addEventListener("scroll", logit)
-  //     }
-  //     watchScroll()
-  //     return () => {
-  //       window.removeEventListener("scroll", logit)
-  //     }
-  // })
+
   if (isLoading) return <LinearProgress  color="secondary"/>
 
   if(isError) return <p>{error.message}</p>
@@ -86,8 +74,6 @@ function App() {
            direction="row"
            justify="center"
            alignItems="flex-start"
-           
-          // spacing={5}
         >
             {data.map(item => (
               <Grid item key={item.id} style={{margin: 5}} zeroMinWidth>
