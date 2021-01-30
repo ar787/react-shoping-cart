@@ -8,7 +8,6 @@ const Modal = ({ item, open, setOpenDialog, addToCart }) => (
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "baseline",
-                    // padding: 40,
                     paddingTop: 0,
                 }}>
                     <div className="icon" style={{width: "60%",}}>
@@ -20,7 +19,6 @@ const Modal = ({ item, open, setOpenDialog, addToCart }) => (
                 <div className="card__body" style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    // padding: 40,
                     paddingTop: 0,
                 }}>
                     <div className="half" style={{paddingTop: 0, padding: 15}}>
@@ -30,8 +28,6 @@ const Modal = ({ item, open, setOpenDialog, addToCart }) => (
                                 padding: 0,
                                 fontWeight: 800,
                                 fontFamily: "Montserrat",
-                                // fontSize: 64,
-                                // lineHeight: 50,
                                 color: "#181e28",
                             }}>{item.title}</h1>
                             <p className="sub" style={{
@@ -57,18 +53,15 @@ const Modal = ({ item, open, setOpenDialog, addToCart }) => (
                     <div className="half" style={{paddingTop: 0}}>
                         <div className="description">
                             <p style={{textAlign:"left", margin: 0,
-            // font-family: "Open Sans", sans-serif;
-            fontWeight: 300,
-            lineHeight: "27px",
-            fontSize: 16,
-            color: "#555"}}>{item.description}</p>
+                                        fontWeight: 300,
+                                        lineHeight: "27px",
+                                        fontSize: 16,
+                                        color: "#555"
+                                     }}>{item.description}</p>
                         </div>
                         <button onClick={() => addToCart(item)}>Add</button>
                     </div>
                 </div>
-                {/* <div style={{textAlign: "right"}}>
-                    <button>Add</button>
-                </div> */}
             </ModalContent>
     </Dialog>
 )
