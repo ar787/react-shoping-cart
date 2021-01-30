@@ -5,7 +5,6 @@ const Item = ({ item, addToCart }) => {
 const [openDialog, setOpenDialog] = useState(false)
     return (
         <>
-           {/* {openDialog ?  <Dialog item={item} openDialog={openDialog} setOpenDialog={setOpenDialog}/> : null} */}
             <Modal item={item} open={openDialog} setOpenDialog={setOpenDialog} addToCart={addToCart}/>
             <Card style={{width:300}}>
                 <CardActionArea onClick={() => setOpenDialog(true)}>
