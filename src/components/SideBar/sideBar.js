@@ -1,10 +1,10 @@
 
 
 import { Drawer, IconButton, Menu, MenuItem, Typography} from '@material-ui/core'
-import SortIcon from '@material-ui/icons/Sort';
+import SortIcon from '@material-ui/icons/Sort'
 import { Wrapper } from './sideBar.css'
 import CartItem from '../CartItem/cartItem'
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn'
 import { useState } from 'react';
 const SideBar = ({open, setOpen, cartItems, setCartItems, getTotalPrice, addToCart, removeToCart, deleteCartItem}) => {
     const [anchorEl, setAnchorEl] = useState(null)
